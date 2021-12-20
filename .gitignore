@@ -41,3 +41,6 @@ gradle-app.setting
 library.iml
 # Ignore Gradle build output directory
 build
+
+#Apple
+.DS_Store
