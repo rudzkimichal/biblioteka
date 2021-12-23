@@ -29,5 +29,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'library.AppKt'
+    mainClass = 'biblioteka.server.AppKt'
 }

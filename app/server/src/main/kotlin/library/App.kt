@@ -1,4 +1,4 @@
-package library
+package biblioteka.server.app
 
 class App {
     val init: String
