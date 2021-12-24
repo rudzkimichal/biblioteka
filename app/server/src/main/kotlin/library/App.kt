@@ -1,12 +1,17 @@
 package biblioteka.server.app
 
-class App {
-    val init: String
-        get() {
-            return "App init OK"
-        }
-}
+import io.ktor.server.netty.*
+import io.ktor.server.engine.*
+import io.ktor.response.*
+import io.ktor.routing.*
+import io.ktor.application.*
 
 fun main() {
-    println(App().init)
+    embeddedServer(Netty, port = 8080) {
+        routing {
+          get("/") {
+            call.respondText("App init OK")
+          }
+        }
+    }.start(wait = true)
 }
