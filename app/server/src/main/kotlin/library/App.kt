@@ -2,16 +2,10 @@ package biblioteka.server.app
 
 import io.ktor.server.netty.*
 import io.ktor.server.engine.*
-import io.ktor.response.*
-import io.ktor.routing.*
-import io.ktor.application.*
+import biblioteka.server.routing.*
 
 fun main() {
     embeddedServer(Netty, port = 8080) {
-        routing {
-          get("/") {
-            call.respondText("App init OK")
-          }
-        }
+      configureRouting()
     }.start(wait = true)
 }

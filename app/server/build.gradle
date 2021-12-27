@@ -2,7 +2,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.6.10'
     id 'application'
-    id 'java'
 }
 
 repositories {
@@ -10,8 +9,6 @@ repositories {
 }
 
 dependencies {
-    implementation platform('org.jetbrains.kotlin:kotlin-bom')
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation 'io.ktor:ktor-server-core:1.6.7'
     implementation 'io.ktor:ktor-server-netty:1.6.7'
     implementation 'ch.qos.logback:logback-classic:1.2.5'
@@ -19,8 +16,4 @@ dependencies {
 
 application {
     mainClass = 'biblioteka.server.app.AppKt'
-}
-
-tasks.withType(JavaCompile) {
-    options.compilerArgs += ['-Xdoclint:none', '-Xlint:none', '-nowarn']
 }
