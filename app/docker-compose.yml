@@ -6,6 +6,17 @@ services:
       context: .
       dockerfile: server/Dockerfile
     image: server
+    container_name: server
     ports:
       - 8080:8080
+    restart: always
+    depends_on: [db]
+
+  db:
+    build:
+      context: .
+    image: mongo
+    container_name: db
+    ports:
+      - 27017:27017
     restart: always
