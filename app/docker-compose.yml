@@ -13,8 +13,6 @@ services:
     depends_on: [db]
 
   db:
-    build:
-      context: .
     image: mongo
     container_name: db
     ports:
