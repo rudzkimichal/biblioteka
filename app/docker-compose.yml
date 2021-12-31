@@ -19,4 +19,6 @@ services:
     container_name: db
     ports:
       - 27017:27017
+    volumes:
+      - /db
     restart: always
