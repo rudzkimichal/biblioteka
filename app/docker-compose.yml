@@ -9,7 +9,6 @@ services:
     container_name: server
     ports:
       - 8080:8080
-    restart: unless-stopped
     depends_on: [db]
 
   db:
@@ -19,4 +18,3 @@ services:
       - 27017:27017
     volumes:
       - /db
-    restart: always
