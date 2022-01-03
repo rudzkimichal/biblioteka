@@ -7,7 +7,7 @@ import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.request.*
 
-fun Application.configureRouting() {
+fun Application.setRouting() {
   routing {
     get("/") {
       call.respondText("App init successful")

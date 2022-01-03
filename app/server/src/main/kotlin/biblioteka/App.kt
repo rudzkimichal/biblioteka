@@ -6,6 +6,6 @@ import biblioteka.server.routing.*
 
 fun main() {
     embeddedServer(Netty, port = 8080) {
-      configureRouting()
+      setRouting()
     }.start(wait = true)
 }
