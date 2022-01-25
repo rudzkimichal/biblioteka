@@ -9,14 +9,4 @@ services:
     container_name: server
     ports:
       - '8080:8080'
-    depends_on: [db]
-
-  db:
-    image: mongo:latest
-    container_name: db
-    volumes: [database:/data/db/]
-    ports:
-      - '27017:27017'
-
-volumes: { database }
 

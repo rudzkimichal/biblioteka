@@ -6,11 +6,12 @@ import io.ktor.http.*
 import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.request.*
+import biblioteka.server.db.DbClient
 
-fun Application.setRouting() {
-  routing {
-    get("/") {
-      call.respondText("App init successful")
+fun Route.setRouting(db: DbClient) {
+  route("/all") {
+    get {
+      call.respond(db.getAll())
     }
   }
 }
