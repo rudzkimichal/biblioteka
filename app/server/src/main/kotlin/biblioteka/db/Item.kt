@@ -10,5 +10,4 @@ data class Item(
   val title: String?,
   val publishedBy: String?,
   val location: String?,
-
   )
