@@ -9,7 +9,7 @@ import io.ktor.request.*
 import biblioteka.server.db.DbClient
 
 fun Route.setRouting(db: DbClient) {
-  route("/all") {
+  route("/") {
     get {
       call.respond(db.getAll())
     }
