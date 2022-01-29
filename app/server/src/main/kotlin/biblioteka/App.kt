@@ -13,7 +13,7 @@ fun main() {
   embeddedServer(Netty, port = 8080) {
     val db = DbClient()
     install(ContentNegotiation) {
-      json ()
+      json()
     }
 
     routing {

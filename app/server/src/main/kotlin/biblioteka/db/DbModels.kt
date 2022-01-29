@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 data class Item(
   @BsonId
   val id: String? = ObjectId().toString(),
-  val author: Author,
+  val author: Author?,
   val title: String?,
   val publishedBy: String?,
   val location: String?,
