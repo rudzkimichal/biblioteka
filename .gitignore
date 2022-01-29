@@ -44,3 +44,6 @@ build
 
 #Apple
 .DS_Store
+
+#Environmental variables
+.env
