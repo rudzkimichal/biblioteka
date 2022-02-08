@@ -11,7 +11,10 @@ import biblioteka.server.db.*
 fun Route.setRouting(db: DbClient) {
   route("/") {
     get {
-      call.respond(db.getAll())
+      val items = db.getAll()
+      if(items.isNotEmpty())
+        call.respond(items) else
+          call.respondText("No items in database", status = HttpStatusCode.NotFound)
     }
     post {
       val item = call.receive<Item>()
