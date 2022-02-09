@@ -15,4 +15,5 @@ class DbClient {
 
   suspend fun getAll(): List<Item> = coll.find().toList()
   suspend fun addItem(item: Item): InsertOneResult = coll.insertOne(item)
+  suspend fun getById(id: String) = coll.findOne(Item::id eq id)
 }
